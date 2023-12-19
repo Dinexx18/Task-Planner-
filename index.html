@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Task Planner</title>
+    <script src="script.js"></script>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Task Planner</h1>
+    
+    <!-- User Management Section -->
+    <div id="user-management" class="section">
+      <h2>User Management</h2>
+      
+      <!-- Form to add a new user -->
+      <form id="add-user-form">
+        <label for="username">Username:</label>
+        <input type="text" id="username" required>
+        
+        <label for="role">Role:</label>
+        <select id="role">
+          <option value="manager">Manager</option>
+          <option value="developer">Developer</option>
+          <option value="tester">Tester</option>
+          <option value="trainer">Trainer</option>
+          <option value="worker">Worker</option>
+          <option value="decorator">Decorator</option>
+        </select>
+        
+        <button type="button" onclick="addUser()">Add User</button>
+      </form>
+      
+      <!-- Display list of users -->
+      <ul id="user-list"></ul>
+    </div>
+
+    <!-- Task Status and Progress Section -->
+  <section id="task-status-progress" class="section center">
+    <h2>Task Status and Progress</h2>
+    <form id="update-status-form">
+      <label for="task-id">Task ID:</label>
+      <input type="text" id="task-id" placeholder="Enter task ID" required>
+
+      <label for="status">Status:</label>
+      <select id="status" required>
+        <option value="completed">Completed</option>
+        <option value="pending">Pending</option>
+        <option value="on-hold">On Hold</option>
+        <option value="closed">Closed</option>
+      </select>
+
+      <button type="button" onclick="updateTaskStatus()">Update Status</button>
+    </form>
+    <div id="progress-dashboard">
+      <!-- Placeholder content -->
+      Progress dashboard will be displayed here.
+    </div>
+  </section>
+
+    <!-- Task Creation and Assignment Section -->
+    <div id="task-section" class="section">
+      <h2>Task Creation and Assignment</h2>
+
+      <!-- Form to add a new task -->
+      <form id="add-task-form">
+        <label for="task-name">Task Name:</label>
+        <input type="text" id="task-name" required>
+
+        <label for="project">Project:</label>
+        <select id="project" required>
+          <!-- Populate with existing projects or allow user selection -->
+        </select>
+
+        <label for="assignee">Assignee:</label>
+        <select id="assignee" required>
+          <!-- Populate with existing users or allow user selection -->
+        </select>
+
+        <label for="priority">Priority:</label>
+        <select id="priority" required>
+          <option value="high">High</option>
+          <option value="medium">Medium</option>
+          <option value="low">Low</option>
+        </select>
+
+        <label for="dependencies">Dependencies:</label>
+        <input type="text" id="dependencies" placeholder="Task IDs separated by commas">
+
+        <button type="button" onclick="addTask()">Add Task</button>
+      </form>
+
+      <!-- Display list of tasks -->
+      <ul id="task-list"></ul>
+    </div>
+
+    <!-- Client Management Section -->
+    <div id="client-management" class="section">
+      <h2>Client Management</h2>
+
+      <!-- Form to add a new client -->
+      <form id="add-client-form">
+        <label for="client-name">Client Name:</label>
+        <input type="text" id="client-name" required>
+
+        <button type="button" onclick="addClient()">Add Client</button>
+      </form>
+
+      <!-- Display list of clients -->
+      <ul id="client-list"></ul>
+    </div>
+
+    <!-- Task Management Section -->
+  <section id="task-management" class="section center">
+    <h2>Task Management</h2>
+    <form id="add-task-form">
+      <label for="task-name">Task Name:</label>
+      <input type="text" id="task-name" required>
+
+      <label for="project">Project:</label>
+      <select id="project" required>
+        <!-- Populate with existing projects or allow user selection -->
+      </select>
+
+      <label for="assignee">Assignee:</label>
+      <select id="assignee" required>
+        <!-- Populate with existing users or allow user selection -->
+      </select>
+
+      <label for="priority">Priority:</label>
+      <select id="priority" required>
+        <option value="high">High</option>
+        <option value="medium">Medium</option>
+        <option value="low">Low</option>
+      </select>
+
+      <label for="dependencies">Dependencies:</label>
+      <input type="text" id="dependencies" placeholder="Task IDs separated by commas">
+
+      <label for="deadline">Deadline:</label>
+      <input type="date" id="deadline" required>
+
+      <button type="button" onclick="addTask()">Add Task</button>
+    </form>
+    <ul id="task-list"></ul>
+  </section>
+
+  
+
+  <!-- Deadline Tracking Section -->
+  <section id="deadline-tracking" class="section center">
+    <h2>Deadline Tracking</h2>
+    <div id="timeline-calendar">
+      <!-- Placeholder content -->
+      Visual timelines and calendars will be displayed here.
+    </div>
+  </section>
+
+    <!-- Project Management Section -->
+    <div id="project-management" class="section">
+      <h2>Project Management</h2>
+
+      <!-- Form to add a new project -->
+      <form id="add-project-form">
+        <label for="project-name">Project Name:</label>
+        <input type="text" id="project-name" required>
+
+        <label for="client">Client:</label>
+        <select id="client" required>
+          <!-- Populate with existing clients or allow user selection -->
+          <option value="client1">Client 1</option>
+          <option value="client2">Client 2</option>
+          <option value="client3">Client 3</option>
+        </select>
+
+        <label for="project-manager">Project Manager:</label>
+        <select id="project-manager" required>
+          <!-- Populate with existing users or allow user selection with 'manager' role -->
+          <option value="manager1">Manager 1</option>
+          <option value="manager2">Manager 2</option>
+          <option value="manager3">Manager 3</option>
+        </select>
+
+        <button type="button" onclick="addProject()">Add Project</button>
+      </form>
+
+      <!-- Display list of projects -->
+      <ul id="project-list"></ul>
+    </div>
+  </div>
+
+
+</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
